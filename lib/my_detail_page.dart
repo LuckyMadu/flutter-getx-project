@@ -325,9 +325,15 @@ class _DetailPageState extends State<DetailPage> {
                         height: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
-                            color: Color(0xFFfbc33e)),
-                        child:
-                            Icon(Icons.favorite_border, color: Colors.white)),
+                            color: Color(0xFFfbc33e)
+                        ),
+                        child: IconButton(
+                          icon:Icon(Icons.favorite_border), 
+                          // onPressed: ()=> debugPrint('press'),
+                          onPressed: ()=> fav.favCounter(),
+                          color: Colors.white,
+                          ), 
+                    ),                      
                     SizedBox(
                       width: 10,
                     ),
